@@ -1,0 +1,142 @@
+if jump
+20
+ram to gpr 0 2
+ram to gpr 1 3
+compute gpr 0 div gpr 1 gpr 2
+compute gpr 1 mul gpr 2 gpr 1
+compute gpr 0 sub gpr 1 gpr 1
+rom gpr 3 at 0
+if gpr 1 == gpr 3
+{
+rom gpr 4 at 1
+if jump
+15
+}
+rom gpr 4 at 2
+ram from gpr 4 2
+ram to gpr 0 0
+rom gpr 1 at 3
+compute gpr 1 add gpr 0 gpr 0
+irar gpr 0
+if jump
+94
+ram to gpr 0 2
+ram from gpr 0 7
+rom gpr 1 at 4
+ram from gpr 0 2
+ram from gpr 1 3
+gbl gpr 0
+ram from gpr 0 0
+if jump
+2
+ram to gpr 3 2
+rom gpr 4 at 5
+if gpr 3 == gpr 4
+{
+END
+}
+ram to gpr 0 7
+rom gpr 5 at 6
+ram from gpr 0 2
+ram from gpr 5 3
+gbl gpr 0
+ram from gpr 0 0
+if jump
+2
+ram to gpr 3 2
+rom gpr 4 at 7
+if gpr 3 == gpr 4
+{
+END
+}
+ram to gpr 0 7
+rom gpr 1 at 8
+compute gpr 0 div gpr 1 gpr 6
+ram from gpr 6 6
+rom gpr 0 at 9
+ram from gpr 0 4
+rom gpr 1 at 10
+ram from gpr 1 5
+ram to gpr 0 4
+ram to gpr 2 6
+if gpr 0 < gpr 2
+{
+ram to gpr 7 4
+ram to gpr 0 7
+ram from gpr 0 2
+ram from gpr 7 3
+gbl gpr 0
+ram from gpr 0 0
+if jump
+2
+ram to gpr 8 2
+rom gpr 4 at 11
+if gpr 8 == gpr 4
+{
+END
+}
+ram to gpr 1 5
+ram to gpr 0 4
+compute gpr 1 add gpr 0 gpr 0
+ram from gpr 0 4
+if jump
+59
+}
+rom gpr 8 at 12
+TRUE
+mark END
+rom gpr 8 at 13
+mark TRUE
+ram from gpr 8 2
+ram to gpr 0 1
+rom gpr 1 at 14
+compute gpr 1 add gpr 0 gpr 0
+irar gpr 0
+io input gpr 0
+io input gpr 1
+ram from gpr 0 8
+ram from gpr 1 10
+rom gpr 1 at 15
+ram from gpr 1 9
+ram to gpr 0 8
+ram to gpr 2 10
+if gpr 0 < gpr 2
+{
+ram to gpr 2 8
+ram from gpr 2 2
+gbl gpr 0
+ram from gpr 0 1
+if jump
+22
+ram to gpr 3 2
+rom gpr 4 at 16
+if gpr 3 == gpr 4
+{
+ram to gpr 2 8
+io output gpr 2
+}
+ram to gpr 1 9
+ram to gpr 0 8
+compute gpr 1 add gpr 0 gpr 0
+ram from gpr 0 8
+if jump
+100
+}
+eof 
+0
+1
+0
+4
+2
+1
+3
+1
+2
+5
+2
+1
+1
+0
+4
+2
+1

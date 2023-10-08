@@ -1,0 +1,78 @@
+def id
+{
+save k from 0
+save n from 1
+m = k / n
+n = n * m
+n = k - n
+zero = 0
+if n == zero
+{
+q = 1
+}
+else
+{
+q = 0
+}
+save q to 0
+}
+def ip
+{
+save n from 0
+save n to 5
+two = 2
+id n two 
+save idt from 0
+one = 1
+if idt == one 
+{
+END
+}
+save n from 5
+three = 3
+id n three
+save idt from 0
+one = 1
+if idt == one 
+{
+END
+}
+save n from 5
+two = 2
+nh = n / two
+save nh to 4
+for 2 5 null 2
+{
+save i from 2
+save n from 5
+id n i 
+save q from 0
+one = 1
+if q == one 
+{
+END
+}
+}
+q = 1
+TRUE
+mark END 
+q = 0
+mark TRUE
+save q to 0
+}
+io input start
+io input stop 
+save start to 6
+save stop to 8
+for 2 null null 6
+{
+save i from 6
+ip i
+save q from 0
+one = 1
+if q == one 
+{
+save i from 6
+print i
+}
+}

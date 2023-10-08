@@ -1,0 +1,250 @@
+def pow
+{
+save a from 3
+save b from 15
+c = 1000
+b = b / c
+save a to 10
+save b to 7
+for 1 null 1 7
+{
+save a from 3
+save b from 10
+b = a * b 
+save b to 10
+}
+}
+def xf 
+{
+save a from 15
+b = 1000
+a = a / b
+b = 1
+save b to 11
+b = 1
+a = a + b 
+save a to 7
+for 1 null 1 7
+{
+save a from 11
+save b from 8
+a = a * b 
+save a to 11
+}
+save a from 11
+}
+def id
+{
+save a from 16
+save b from 17
+save c from 17
+q = 0
+b = a / b 
+c = b * c 
+if a == c
+{
+q = 1
+}
+save q to 18
+}
+def sin
+{
+q = 0
+save len from 5
+save len to 12
+save q to 19
+for 0 null 1 12
+{
+save i from 13
+print i
+a = 2000
+i = a * i 
+a = 1000
+i = i + a
+save i to 15
+pow 
+xf 
+save i from 13
+save i to 16
+t = 2
+save t to 17
+id 
+save t from 18
+tthr = 1
+ttwo = 1000
+save tone from 10
+tone = tone * ttwo 
+save ttw from 11
+ton = tone / ttw 
+save ton to 20
+if t == tthr
+{
+save q from 19
+save ton from 20
+q = q + ton 
+save q to 19
+sinend
+}
+save q from 19
+save ton from 20
+q = q - ton 
+save q to 19
+mark sinend
+}
+save q from 19
+save q to 6
+}
+def mainthread
+{
+save a from 4
+b = 0
+if a == b
+{
+save a from 3
+save b from 5
+c = a + b
+save c to 6
+end
+}
+save a from 4
+b = 1
+if a == b
+{
+save a from 3
+save b from 5
+c = a - b
+save c to 6
+end
+}
+save a from 4
+b = 2
+if a == b
+{
+save a from 3
+save b from 5
+c = a * b
+save c to 6
+end
+}
+save a from 4
+b = 3
+if a == b
+{
+save a from 3
+save b from 5
+c = a / b
+save c to 6
+end
+}
+save a from 4
+b = 4
+if a == b
+{
+sqrt
+end
+}
+save a from 4
+b = 5
+if a == b 
+{
+save b from 5
+c = 1000
+b = b * c 
+save b to 15
+pow
+save q from 10
+save q to 6
+end 
+}
+save a from 4
+b = 6
+if a == b 
+{
+save a from 3 
+b = 1000000
+a = a * b 
+save a to 15
+xf 
+save q from 11
+save q to 6
+end 
+}
+save a from 4
+b = 7
+if a == b 
+{
+sin
+end
+}
+save a from 4
+b = 8
+if a == b
+{
+temp = 1
+save temp to 1
+broke
+}
+q = -1
+print q
+mark end
+save q from 6
+print q
+mark broke
+}
+def ui
+{
+for 0 1 0 0
+{
+text = 0
+print text 
+input a
+t = -360
+if a == t
+{
+save a from 6
+}
+save a to 3
+text = 1
+print text 
+input b 
+t = 4
+if b == t 
+{
+save a from 3
+t = -360
+if a == t 
+{
+text = 21
+print text 
+input operator
+text = 22
+print text
+input scalar
+save a from 3
+t = 0
+if operator == t 
+{
+a = a * scalar 
+}
+t = 1
+if operator == t 
+{
+a = a / scalar
+}
+save a to 3
+}
+}
+save b to 4
+text = 2
+print text 
+input c
+t = -360
+if c == t 
+{
+save c from 6
+}
+save c to 5
+mainthread
+}
+}
+ui

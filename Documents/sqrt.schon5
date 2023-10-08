@@ -1,0 +1,22 @@
+def sqrt
+{
+save n from 0
+save depth from 1
+q = 10
+save q to 5
+save n to 6
+save depth to 4
+for 1 0 null 2
+{
+save i from 2
+save q from 5
+save n from 6 
+two = 2
+t = n / q
+t = q + t
+q = t / two 
+save q to 5
+}
+save q from 5
+save q to 0
+}

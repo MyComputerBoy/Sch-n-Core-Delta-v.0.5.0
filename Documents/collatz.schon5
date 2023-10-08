@@ -1,0 +1,65 @@
+def id
+{
+save k from 0
+save n from 1
+m = k / n
+n = n * m
+n = k - n
+zero = 0
+if n == zero
+{
+q = 1
+}
+else
+{
+q = 0
+}
+save q to 0
+}
+def collatz_step
+{
+save n from 0
+save n to 2
+two = 2
+id n two 
+save idt from 0
+save n from 2
+one = 1
+if idt == one 
+{
+two = 2
+q = n / two 
+}
+else
+{
+save n from 2
+one = 1
+two = 2
+three = 3
+n = n * three 
+n = n + one 
+q = n / two 
+}
+save q to 0
+}
+def collatz 
+{
+save n from 0
+save n to 3
+mark START
+save n from 3
+print n
+collatz_step n
+save new_n from 0
+one = 1
+if new_n == one 
+{
+END
+}
+save new_n to 3
+START
+mark END
+save one to 0
+}
+io input n
+collatz n

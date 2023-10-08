@@ -1,0 +1,78 @@
+if jump
+37
+ram to gpr 0 1
+ram to gpr 1 2
+rom gpr 2 at 0
+ram from gpr 2 6
+ram from gpr 0 7
+ram from gpr 1 5
+rom gpr 0 at 1
+ram from gpr 0 3
+rom gpr 1 at 2
+ram from gpr 1 4
+ram to gpr 0 3
+ram to gpr 2 5
+if gpr 0 < gpr 2
+{
+ram to gpr 3 3
+ram to gpr 2 6
+ram to gpr 0 7
+rom gpr 4 at 3
+compute gpr 0 div gpr 2 gpr 5
+compute gpr 2 add gpr 5 gpr 5
+compute gpr 5 div gpr 4 gpr 2
+ram from gpr 2 6
+ram to gpr 1 4
+ram to gpr 0 3
+compute gpr 1 add gpr 0 gpr 0
+ram from gpr 0 3
+if jump
+12
+}
+ram to gpr 2 6
+ram from gpr 2 1
+ram to gpr 0 0
+rom gpr 1 at 4
+compute gpr 1 add gpr 0 gpr 0
+irar gpr 0
+rom gpr 31 at 5
+io output gpr 31
+io input gpr 0
+ram from gpr 0 11
+rom gpr 0 at 6
+ram from gpr 0 8
+rom gpr 1 at 7
+ram from gpr 1 9
+rom gpr 2 at 8
+ram from gpr 2 10
+ram to gpr 0 8
+ram to gpr 2 10
+if gpr 0 < gpr 2
+{
+io input gpr 1
+ram to gpr 0 11
+ram from gpr 1 1
+ram from gpr 0 2
+gbl gpr 0
+ram from gpr 0 0
+if jump
+2
+ram to gpr 2 1
+io output gpr 2
+ram to gpr 1 9
+ram to gpr 0 8
+compute gpr 1 add gpr 0 gpr 0
+ram from gpr 0 8
+if jump
+47
+}
+eof 
+10
+0
+1
+2
+4
+-1
+0
+0
+1

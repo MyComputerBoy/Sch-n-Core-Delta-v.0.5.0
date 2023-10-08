@@ -1,0 +1,36 @@
+def f_goc
+{
+save aon from 0
+save bon from 1
+srar a_o from 0
+t = 1
+t = aon + t
+save t to 0
+srar atw from 0
+srar b_o from 1
+t = 1
+t = bon + 1
+save t to 1
+srar btw from 1
+print a_o 
+print atw 
+print b_o 
+print btw 
+}
+def cfn
+{
+save cfnaon from 0
+save cfnatw from 1
+save cfnofs from 2
+srar cfnaon to 2
+t = 1
+cfnofs = cfnofs + t 
+save cfnofs to 2
+srar cfnatw to 2
+}
+cfn 5 7 20
+save a from 1b10
+save b from 1b21
+print a 
+print b
+f_goc 20
